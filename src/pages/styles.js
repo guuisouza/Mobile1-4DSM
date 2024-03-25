@@ -1,6 +1,5 @@
 import styled from 'styled-components/native';
-import { ReactButton } from 'react-native-gesture-handler'
-
+import {RectButton} from 'react-native-gesture-handler';
 
 export const Container = styled.View`
     flex: 1;
@@ -23,12 +22,13 @@ export const Input = styled.TextInput.attrs({
     padding: 0 15px;
     border: 1px solid #eee
 `
-export const SubmitButton = styled(ReactButton)`
+export const SubmitButton = styled(RectButton)`
     justify-content: center;
     align-items: center;
     background: #498db;
     margin-left: 10px;
     padding: 0 12px;
+    opacity: ${props => (props.loading ? 0.7 : 1)}
 `
 
 export const List = styled.FlatList`
